@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    tools:context="com.example.chemar.currencyconverter.MainActivity">
+
+
+    <GridLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:columnCount="1"
+
+        android:rowCount="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_row="0"
+            android:layout_rowWeight="4"
+
+            >
+
+            <EditText
+                android:id="@+id/txtFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/lblCurrencyFrom"
+                android:layout_alignBottom="@+id/lblCurrencyFrom"
+                android:layout_marginStart="7dp"
+                android:layout_toEndOf="@+id/lblCurrencyFrom"
+                android:ems="10"
+                android:hint="0.00"
+                android:inputType="none"
+                android:singleLine="true"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/ddlFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_alignTop="@+id/lblFrom"
+                android:layout_marginStart="13dp"
+                android:layout_toEndOf="@+id/lblFrom" />
+
+            <TextView
+                android:id="@+id/lblCurrencyFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/ivFrom"
+                android:layout_below="@+id/ddlFrom"
+                android:layout_marginTop="16dp"
+                android:text="$"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/ivFrom"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/lblFrom"
+                android:layout_marginStart="21dp"
+                app:srcCompat="@mipmap/jmd" />
+
+            <TextView
+                android:id="@+id/lblFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@+id/ivFrom"
+                android:text="FROM" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_row="1"
+            android:layout_rowWeight="4">
+
+            <TextView
+                android:id="@+id/lblTextTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/lblCurrencyTo"
+                android:layout_alignBottom="@+id/lblCurrencyTo"
+                android:layout_marginStart="9dp"
+                android:layout_toEndOf="@+id/lblCurrencyTo"
+                android:text="0.00"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/lblCurrencyTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/ivTo"
+                android:layout_below="@+id/ivTo"
+                android:layout_marginTop="30dp"
+                android:text="$"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/lblTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ddlTo"
+                android:layout_marginEnd="6dp"
+                android:layout_toStartOf="@+id/ddlTo"
+                android:text="TO" />
+
+            <ImageView
+                android:id="@+id/ivTo"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="11dp"
+                app:srcCompat="@mipmap/usa" />
+
+            <Spinner
+                android:id="@+id/ddlTo"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/ivTo"
+                android:layout_marginEnd="20dp" />
+
+
+        </RelativeLayout>
+
+
+    </GridLayout>
+
+
+    <GridLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:columnCount="4"
+
+        android:rowCount="4">
+
+        <Button
+            android:id="@+id/btnDot"
+            style="@android:style/Widget.DeviceDefault.Button.Borderless"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="3"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:text="@string/decimal_point"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:text="@string/_1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:text="@string/_4"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:text="@string/_7"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:text="@string/_2"
+            android:textSize="24sp" />
+
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:text="@string/_3"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:text="@string/_9"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn0"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1"
+            android:layout_row="3"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:text="@string/_0"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:text="@string/_8"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:text="@string/_5"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:text="@string/_6"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:text="\u232b"
+            android:layout_rowWeight="1"
+            android:background="@drawable/my_btn_background"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/Widget.AppCompat.Button.Borderless"
+
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_rowSpan="2"
+            android:layout_rowWeight="1"
+            android:text="="
+            android:background="@drawable/my_btn_background"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnSwitch"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:fontFamily="@font/fontawesome_webfont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:text="\uf0ec"
+            android:background="@drawable/my_btn_background"
+            android:textSize="24sp" />
+
+
+    </GridLayout>
+
+
+
+</LinearLayout>
